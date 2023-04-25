@@ -1,0 +1,55 @@
+.form-container {
+    margin: auto;
+}
+
+.form-section {
+    border: 1px solid black;
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-left: 20px;
+    border-left-width: 5px;
+    border-left-color: #48c6e7;
+    box-shadow: 20px;
+    text-align: left;
+    min-height: 100px;
+}
+.first {
+    padding: 10px;
+    text-align: center;
+    border-top-width: 7px;
+    border-top-color: #48c6e7;
+    /* border-right-width: 5px;
+    border-right-color: #48c6e7; */
+}
+
+.page-logo {
+    width: 200px;
+    height: auto;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.submit {
+    text-align: center;
+}
+
+.reqAsterisk {
+    display: inline;
+    font-weight: 800;
+    color: red;
+    visibility: visible;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  
+    .form-section {
+        width: 90%;
+    }
+}

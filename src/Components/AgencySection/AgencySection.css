@@ -1,0 +1,37 @@
+.agencyLabel {
+    justify-content: left; 
+    font-size: 1em;
+    font-weight: 600;  
+    display: flex;
+}  
+
+.agency-dropdown {
+    width: 70%;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: #48c6e7;
+}
+
+.numOfChildLabel {
+    justify-content: left; 
+    font-size: 1em;
+    font-weight: 600;  
+    /* display: flex; */
+}
+
+.numOfChild-dropdown {
+    width: 50%;
+    font-size: 1em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-color: #48c6e7;
+}
+
+@media screen and (max-width: 500px) {
+  
+    .agency-dropdown {
+        width: 90%;
+    }
+}
+

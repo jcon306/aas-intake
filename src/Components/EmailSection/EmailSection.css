@@ -1,0 +1,25 @@
+.emailLabel {
+    justify-content: left; 
+    font-size: 1em;
+    font-weight: 600;  
+}  
+
+.emailInput {
+    display: block;
+    width: 70%;
+    margin-top: 25px;
+    border-bottom: 1px solid gray;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden; 
+    outline: none; 
+    font-size: 1em;
+}
+
+input:focus {
+    border: 2px solid #48c6e7;
+    border-radius: 5px;
+    
+}
+
+

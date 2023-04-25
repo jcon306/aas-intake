@@ -1,0 +1,83 @@
+.address-form-section {
+    flex-direction: row;
+}
+
+.addressLabel {
+    justify-content: left; 
+    font-size: 1em;
+    font-weight: 600; 
+}  
+
+.addressInput {
+    width: 70%;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden; 
+    outline: none; 
+    font-size: 1em;
+}
+
+.cityLabel {
+    justify-content: left; 
+    font-size: 1em;
+    font-weight: 600
+}
+
+.cityInput {
+    width: 30%;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-right: 3%;
+    border-bottom: 1px solid gray;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden; 
+    outline: none; 
+    font-size: 1em;
+}
+
+.zipCodeLabel {
+    justify-content: left; 
+    font-size: 1em;
+    font-weight: 600
+}
+
+.zipCodeInput {
+    width: 15%;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden; 
+    outline: none; 
+    font-size: 1em;
+}
+
+@media screen and (max-width: 500px) {
+  
+    .addressInput {
+        margin-left: 10px;
+        width: 60%;
+    }
+}
+
+@media screen and (width: 540px) {
+    .addressInput {
+        margin-left: 10px;
+        width: 60%;
+    }
+}
+
+input:focus {
+    border: 2px solid #48c6e7;
+    border-radius: 5px;
+    
+}
+
