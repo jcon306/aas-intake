@@ -9,7 +9,7 @@ const PhoneSection = ({ phoneNumberChange, phoneNumber }) => {
                 className='phoneInput'
                 type='tel' 
                 placeholder='Enter phone number'
-                maxLength={10}
+                maxLength={14}
                 required
                 onChange={phoneNumberChange}
                 value={phoneNumber}
