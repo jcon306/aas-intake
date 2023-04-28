@@ -63,7 +63,7 @@
 }
 
 .grade-dropdown {
-    width: 15%;
+    width: 17%;
     font-size: 1em;
     margin-top: 15px;
     margin-left: 10px;
@@ -96,27 +96,27 @@ input:focus {
 
     .grade-dropdown {
         font-size: 1em;
-        width: 25%;
+        width: 30%;
         margin-bottom: 10px;
     }
 
-}
-
-@media screen and (max-width: 820px) {
-    .ageInput {
-        margin-right: 100px;
-    }
 }
 
 @media screen and (max-width: 540px) {
     .ageInput {
         margin-right: 40px;
     }
+    .grade-dropdown {
+        width: 40%;
+    }
 }
 
 @media screen and (max-width: 414px) {
     .ageInput {
         margin-right: 80px;
+    }
+    .grade-dropdown {
+        width: 40%;
     }
 }
 
@@ -129,6 +129,9 @@ input:focus {
     .gradeLabel {
         display: inline-block;
     }
+    .grade-dropdown {
+        width: 40%;
+    }
 
 }
 
@@ -136,6 +139,9 @@ input:focus {
     
     .ageInput {
         margin-right: 20px; 
+    }
+    .grade-dropdown {
+        width: 40%;
     }
 
 }

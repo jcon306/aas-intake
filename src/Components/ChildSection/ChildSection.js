@@ -68,6 +68,7 @@ class ChildSection extends Component {
                                 className='grade-dropdown childInformation'>
                                     <option value=''></option>
                                     <option value='Pre-K'>Pre-K</option>
+                                    <option value='Kindergarten'>Kindergarten</option>
                                     <option value='1'>1</option>
                                     <option value='2'>2</option>
                                     <option value='3'>3</option>
@@ -76,6 +77,8 @@ class ChildSection extends Component {
                                     <option value='6'>6</option>
                                     <option value='7'>7</option>
                                     <option value='8'>8</option>
+                                    <option value='High School'>High School</option>
+                                    
                                     
                             </select>
                     </div>
