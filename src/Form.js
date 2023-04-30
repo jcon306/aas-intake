@@ -136,23 +136,18 @@ class Form extends Component {
                     "Phone Number": this.state.phoneNumber,
                     "Referral Agency": this.state.agency,
                     "Number Of Children": this.state.numOfChildren,
-                    "Child Name(s)": this.state.childNames.toString(),
-                    "Child Gender(s)": this.state.childGenders.toString(),
-                    "Child Age(s)": this.state.childAges.toString(),
-                    "Child Grade(s)": this.state.childGrades.toString(),
+                    "Child Name(s)": this.state.childNames.join(', '),
+                    "Child Gender(s)": this.state.childGenders.join(', '),
+                    "Child Age(s)": this.state.childAges.join(', '),
+                    "Child Grade(s)": this.state.childGrades.join(', '),
                     "Date Signed Up": new Date().toLocaleDateString('en-US')         
                 }
-                axios.post("https://sheet.best/api/sheets/b3bd3d89-c575-4f6f-b59a-81f9d5d5f16d", data) //sheet.best
-                //axios.post("https://api.apispreadsheets.com/data/ZXotx2OSbfbA9cwV/", data) //apispreadsheets
+                axios.post("https://sheet.best/api/sheets/b3bd3d89-c575-4f6f-b59a-81f9d5d5f16d", data) 
                     .then((response) => {
                         if (response.status === 200) {
                             console.log(response)
                             alert('Registration successful! You may now close this page.')
                         } 
-                        // if (response.status === 201) {
-                        //         console.log(response)
-                        //         alert('Registration successful! You may now close this page.')
-                        //     } 
                         this.setState({
                             motherFirstName: '',
                             motherLastName: '',
