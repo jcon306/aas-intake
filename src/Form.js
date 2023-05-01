@@ -140,7 +140,8 @@ class Form extends Component {
                     "Child Gender(s)": this.state.childGenders.join(', '),
                     "Child Age(s)": this.state.childAges.join(', '),
                     "Child Grade(s)": this.state.childGrades.join(', '),
-                    "Date Signed Up": new Date().toLocaleDateString('en-US')         
+                    "Date Signed Up": new Date().toLocaleDateString('en-US') ,
+                    "Sponsored": 'No'        
                 }
                 axios.post("https://sheet.best/api/sheets/b3bd3d89-c575-4f6f-b59a-81f9d5d5f16d", data) 
                     .then((response) => {
