@@ -136,10 +136,10 @@ class Form extends Component {
                     "Phone Number": this.state.phoneNumber,
                     "Referral Agency": this.state.agency,
                     "Number Of Children": this.state.numOfChildren,
-                    "Child Name(s)": this.state.childNames.join(', '),
-                    "Child Gender(s)": this.state.childGenders.join(', '),
-                    "Child Age(s)": this.state.childAges.join(', '),
-                    "Child Grade(s)": this.state.childGrades.join(', '),
+                    "Child Name(s)": this.state.childNames.join(","),
+                    "Child Gender(s)": this.state.childGenders.join(","),
+                    "Child Age(s)": this.state.childAges.join(","),
+                    "Child Grade(s)": this.state.childGrades.join(","),
                     "Date Signed Up": new Date().toLocaleDateString('en-US') ,
                     "Sponsored": 'No'        
                 }
