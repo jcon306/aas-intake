@@ -143,7 +143,8 @@ class Form extends Component {
                     "Date Signed Up": new Date().toLocaleDateString('en-US') ,
                     "Sponsored": 'No'        
                 }
-                axios.post("https://sheet.best/api/sheets/b3bd3d89-c575-4f6f-b59a-81f9d5d5f16d", data) 
+                // axios.post("https://sheet.best/api/sheets/b3bd3d89-c575-4f6f-b59a-81f9d5d5f16d", data)
+                axios.post("https://sheet.best/api/sheets/69691e5c-affa-4614-95ac-7866672bbfea", data) 
                     .then((response) => {
                         if (response.status === 200) {
                             console.log(response)
