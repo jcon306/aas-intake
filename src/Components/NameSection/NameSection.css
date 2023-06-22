@@ -24,15 +24,6 @@ input:focus {
     
 }
 
-/* @media screen and (max-width: 540px)  {
-    .nameInput {
-        display: block;
-        margin-left: 0px;
-        margin-bottom: 10px;
-        width: 60%;
-    }
-} */
-
 @media screen and (max-width: 380px)  {
     .nameInput {
         margin-left: 5px;

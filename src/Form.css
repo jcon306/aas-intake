@@ -22,8 +22,6 @@
     text-align: center;
     border-top-width: 7px;
     border-top-color: #48c6e7;
-    /* border-right-width: 5px;
-    border-right-color: #48c6e7; */
 }
 
 .page-logo {
@@ -43,9 +41,6 @@
     color: red;
     visibility: visible;
 }
-
-
-
 
 @media screen and (max-width: 500px) {
   

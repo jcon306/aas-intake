@@ -7,7 +7,7 @@ const NameSection = ({ motherFirstName, motherLastName, onMotherFirstNameChange,
     return (
         <div>
             <label className='nameLabel'>
-                Mother's First Name:{/*} <p id='nameAsterisk' className='reqAsterisk'>*</p>*/}
+                Mother's First Name:
                 <input
                     className='nameInput' 
                     type='text' 
@@ -19,7 +19,7 @@ const NameSection = ({ motherFirstName, motherLastName, onMotherFirstNameChange,
             </label>
             <br />
             <label className='nameLabel'>
-            Mother's Last Name:{/*} <p id='nameAsterisk' className='reqAsterisk'>*</p>*/}
+            Mother's Last Name:
             <input
                 className='nameInput' 
                 type='text' 

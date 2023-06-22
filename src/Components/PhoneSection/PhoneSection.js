@@ -4,7 +4,7 @@ import './PhoneSection.css'
 const PhoneSection = ({ phoneNumberChange, phoneNumber }) => {
     return (
         <label className='phoneLabel'>
-            Phone Number: {/*<p className='reqAsterisk'>*</p>*/}
+            Phone Number: 
             <input 
                 className='phoneInput'
                 type='tel' 

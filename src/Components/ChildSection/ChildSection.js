@@ -30,7 +30,7 @@ class ChildSection extends Component {
         return (
             <div className='child-form-section'>
                              <label className='childNameLabel'>
-                                 Name of child {this.props.index + 1}: {/*<p className='reqAsterisk'>*</p>*/}
+                                 Name of child {this.props.index + 1}: 
                                  <input
                                     className='childNameInput childInformation'
                                     type='text' 
@@ -41,7 +41,7 @@ class ChildSection extends Component {
                                 <br />
                             </label>
                             <label className='genderLabel'>
-                                Gender: {/*<p className='reqAsterisk'>*</p>*/}
+                                Gender: 
                                 <select
                                 onChange={this.handleGenderChange}
                                 className='gender-Dropdown childInformation'>
@@ -51,7 +51,7 @@ class ChildSection extends Component {
                             </select>
                             </label>
                             <label className='ageLabel'>
-                                Age: {/*<p className='reqAsterisk'>*</p>*/}
+                                Age: 
                                 <input 
                                     className='ageInput childInformation'
                                     type='text'
@@ -62,7 +62,7 @@ class ChildSection extends Component {
                                     onChange={this.handleAgeChange}
                                 />
                             </label>
-                            <label className='gradeLabel'>Grade:</label>{/*<p className='reqAsterisk'>*</p>*/}
+                            <label className='gradeLabel'>Grade:</label>
                             <select
                                 onChange={this.handleGradeChange}
                                 className='grade-dropdown childInformation'>

@@ -5,7 +5,7 @@ const AddressSection = ({ addressChange, cityChange, zipCodeChange, address, cit
     return (
         <div className='address-form-section'>
             <label className='addressLabel'>
-                Address: {/*<p className='reqAsterisk'>*</p>*/}
+                Address: 
                 <input 
                     className='addressInput'
                     type='text' 
@@ -17,7 +17,7 @@ const AddressSection = ({ addressChange, cityChange, zipCodeChange, address, cit
                 <br />
             </label>
             <label className='cityLabel'>
-                City: {/*<p className='reqAsterisk'>*</p>*/}
+                City: 
                 <input 
                     className='cityInput'
                     type="text"  
@@ -28,7 +28,7 @@ const AddressSection = ({ addressChange, cityChange, zipCodeChange, address, cit
                 />
             </label>
             <label className='zipCodeLabel'>
-                Zip: {/*<p className='reqAsterisk'>*</p>*/}
+                Zip: 
                 <input 
                     className='zipCodeInput'
                     type='text'

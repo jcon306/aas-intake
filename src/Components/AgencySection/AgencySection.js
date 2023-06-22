@@ -4,7 +4,7 @@ import './AgencySection.css'
 const AgencySection = ({ agencyChange, numberOfChildren, agency, numChildren }) => {
     return (
         <div>
-            <label className='agencyLabel'>Please select the agency who referred you:</label>{/*<p className='reqAsterisk'>*</p>*/}
+            <label className='agencyLabel'>Please select the agency who referred you:</label>
             <select
                 className='agency-dropdown' 
                 value={agency}
@@ -18,7 +18,7 @@ const AgencySection = ({ agencyChange, numberOfChildren, agency, numChildren }) 
                 
             </select>
             <br />
-            <label className='numOfChildLabel'>Select how many children you would like to sign up:</label>{/*<p className='reqAsterisk'>*</p>*/}
+            <label className='numOfChildLabel'>Select how many children you would like to sign up:</label>
             <br />
             <select
                 className='numOfChild-dropdown'

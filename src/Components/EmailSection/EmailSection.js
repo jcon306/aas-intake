@@ -4,7 +4,7 @@ import './EmailSection.css'
 const EmailSection = ({ emailChange, email }) => {
     return (
         <label className='emailLabel'>
-            Email Address: {/*<p className='reqAsterisk'>*</p>*/}
+            Email Address: 
             <input 
                 className='emailInput'
                 type='email' 
