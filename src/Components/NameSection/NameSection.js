@@ -1,32 +1,32 @@
 import React from 'react'
 import './NameSection.css'
 
-const NameSection = ({ motherFirstName, motherLastName, onMotherFirstNameChange, onMotherLastNameChange}) => {
+const NameSection = ({ parentFirstName, parentLastName, onParentFirstNameChange, onParentLastNameChange}) => {
 
 
     return (
         <div>
             <label className='nameLabel'>
-                Mother's First Name:
+                Parent's First Name:
                 <input
                     className='nameInput' 
                     type='text' 
                     placeholder='Enter first name' 
                     required
-                    onChange={onMotherFirstNameChange}
-                    value={motherFirstName}
+                    onChange={onParentFirstNameChange}
+                    value={parentFirstName}
                 />
             </label>
             <br />
             <label className='nameLabel'>
-            Mother's Last Name:
+            Parent's Last Name:
             <input
                 className='nameInput' 
                 type='text' 
                 placeholder='Enter last name' 
                 required
-                onChange={onMotherLastNameChange}
-                value={motherLastName}
+                onChange={onParentLastNameChange}
+                value={parentLastName}
             />
         </label>
     </div>

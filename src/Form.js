@@ -17,8 +17,8 @@ class Form extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            motherFirstName: '',
-            motherLastName: '',
+            parentFirstName: '',
+            parentLastName: '',
             address: '',
             city: '',
             zipCode: '',
@@ -33,14 +33,14 @@ class Form extends Component {
         }
       }
       
-    handleMotherFirstNameChange = (e) => {
+    handleParentFirstNameChange = (e) => {
         this.setState({
-            motherFirstName: e.target.value
+            parentFirstName: e.target.value
         })
     }
-    handleMotherLastNameChange = (e) => {
+    handleParentLastNameChange = (e) => {
         this.setState({
-            motherLastName: e.target.value
+            parentLastName: e.target.value
         })
     }
     handleAddressChange = (e) => {
@@ -126,12 +126,12 @@ class Form extends Component {
             alert('Please enter a valid phone number')
         } else if (!isChildInformationFilled) {
             alert('Please make sure all child information fields are filled out.')
-        } else if (this.state.motherFirstName && this.state.motherLastName && this.state.address && this.state.city 
+        } else if (this.state.parentFirstName && this.state.parentLastName && this.state.address && this.state.city 
             && this.state.zipCode && this.state.agency && this.state.numOfChildren) {
                 const data = {
                     "Email": this.state.email,
-                    "Mother's Last Name": this.state.motherLastName,
-                    "Mother's First Name": this.state.motherFirstName,
+                    "Parents's Last Name": this.state.parentLastName,
+                    "Parents's First Name": this.state.parentFirstName,
                     "Address": `${this.state.address}, ${this.state.city}, ${this.state.zipCode}`,
                     "Phone Number": this.state.phoneNumber,
                     "Referral Agency": this.state.agency,
@@ -149,8 +149,8 @@ class Form extends Component {
                             alert('Registration successful! You may now close this page.')
                         } 
                         this.setState({
-                            motherFirstName: '',
-                            motherLastName: '',
+                            parentFirstName: '',
+                            parentLastName: '',
                             address: '',
                             city: '',
                             zipCode: '',
@@ -196,10 +196,10 @@ class Form extends Component {
                 </div>
                 <div className='form-section'>
                     <NameSection 
-                        onMotherFirstNameChange={this.handleMotherFirstNameChange}
-                        onMotherLastNameChange={this.handleMotherLastNameChange}  
-                        motherFirstName={this.state.motherFirstName}
-                        motherLastName={this.state.motherLastName} />
+                        onParentFirstNameChange={this.handleParentFirstNameChange}
+                        onParentLastNameChange={this.handleParentLastNameChange}  
+                        parentFirstName={this.state.parentFirstName}
+                        parentLastName={this.state.parentLastName} />
                 </div>
                 <div className='form-section'>
                     <AddressSection 
