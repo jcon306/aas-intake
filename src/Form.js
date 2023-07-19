@@ -117,10 +117,6 @@ class Form extends Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        const date = new Date() 
-        let year= date.getFullYear()
-        let month= date.getMonth()+1
-        let day= date.getDate()
         const childInputFields = document.querySelectorAll('.childInformation')
         const isChildInformationFilled = Array.from(childInputFields).every(input => input.value)
 
@@ -144,7 +140,8 @@ class Form extends Component {
                     "Child Gender(s)": this.state.childGenders.join(","),
                     "Child Age(s)": this.state.childAges.join(","),
                     "Child Grade(s)": this.state.childGrades.join(","),
-                    "Date Signed Up": `${day}/${month}/${year}`,
+                    // "Date Signed Up": `${day}/${month}/${year}`,
+                    "Date Signed Up": new Date().toLocaleString().split(',')[0],
                     "Sponsored": 'No'        
                 }
                 axios.post("https://sheet.best/api/sheets/69691e5c-affa-4614-95ac-7866672bbfea", data) 
