@@ -115,7 +115,22 @@ class Form extends Component {
         })
     } 
 
-    handleSubmit = (e) => {
+    async fetchRegisteredEmails() {
+        try {
+            const response = await fetch('https://sheet.best/api/sheets/69691e5c-affa-4614-95ac-7866672bbfea');
+            const data = await response.json();
+
+            const registeredEmails = data.map((row) => row["Email"]);
+
+            return registeredEmails;
+        } catch (error) {
+            console.error('Error fetching registered emails:', error);
+            return [];
+        }
+    }
+
+    // handleSubmit = (e) => {
+    handleSubmit = async (e) => {
         e.preventDefault()
         const childInputFields = document.querySelectorAll('.childInformation')
         const isChildInformationFilled = Array.from(childInputFields).every(input => input.value)
@@ -128,46 +143,55 @@ class Form extends Component {
             alert('Please make sure all child information fields are filled out.')
         } else if (this.state.parentFirstName && this.state.parentLastName && this.state.address && this.state.city 
             && this.state.zipCode && this.state.agency && this.state.numOfChildren) {
-                const data = {
-                    "Email": this.state.email,
-                    "Parents's Last Name": this.state.parentLastName,
-                    "Parents's First Name": this.state.parentFirstName,
-                    "Address": `${this.state.address}, ${this.state.city}, ${this.state.zipCode}`,
-                    "Phone Number": this.state.phoneNumber,
-                    "Referral Agency": this.state.agency,
-                    "Number Of Children": this.state.numOfChildren,
-                    "Child Name(s)": this.state.childNames.join(","),
-                    "Child Gender(s)": this.state.childGenders.join(","),
-                    "Child Age(s)": this.state.childAges.join(","),
-                    "Child Grade(s)": this.state.childGrades.join(","),
-                    // "Date Signed Up": `${day}/${month}/${year}`,
-                    "Date Signed Up": new Date().toLocaleString().split(',')[0],
-                    "Sponsored": 'No'        
+                const registeredEmails = await this.fetchRegisteredEmails();
+                const isEmailAlreadyRegistered = registeredEmails.includes(this.state.email);
+    
+                if (isEmailAlreadyRegistered) {
+                    alert('Email is already registered.');
+                    window.location.reload()
+                    return
+                } else {
+                    const data = {
+                        "Email": this.state.email,
+                        "Parents's Last Name": this.state.parentLastName,
+                        "Parents's First Name": this.state.parentFirstName,
+                        "Address": `${this.state.address}, ${this.state.city}, ${this.state.zipCode}`,
+                        "Phone Number": this.state.phoneNumber,
+                        "Referral Agency": this.state.agency,
+                        "Number Of Children": this.state.numOfChildren,
+                        "Child Name(s)": this.state.childNames.join(","),
+                        "Child Gender(s)": this.state.childGenders.join(","),
+                        "Child Age(s)": this.state.childAges.join(","),
+                        "Child Grade(s)": this.state.childGrades.join(","),
+                        "Date Signed Up": new Date().toLocaleString().split(',')[0],
+                        "Sponsored": 'No'        
+                    }
+                    axios.post("https://sheet.best/api/sheets/69691e5c-affa-4614-95ac-7866672bbfea", data) 
+                        .then((response) => {
+                            if (response.status === 200) {
+                                alert('Registration successful! You may now close this page.')
+                            } 
+                            this.setState({
+                                parentFirstName: '',
+                                parentLastName: '',
+                                address: '',
+                                city: '',
+                                zipCode: '',
+                                phoneNumber: '',
+                                email: '',
+                                agency: '',
+                                numOfChildren: 0,
+                                childNames: [''],
+                                childGenders: [''],
+                                childAges: [''],
+                                childGrades: ['']
+                            }) 
+                        })
+                        .catch(error => {
+                            alert('There was a problem registering. Please try again later or email Families For Families.\n' + error.message)
+                        })
                 }
-                axios.post("https://sheet.best/api/sheets/69691e5c-affa-4614-95ac-7866672bbfea", data) 
-                    .then((response) => {
-                        if (response.status === 200) {
-                            alert('Registration successful! You may now close this page.')
-                        } 
-                        this.setState({
-                            parentFirstName: '',
-                            parentLastName: '',
-                            address: '',
-                            city: '',
-                            zipCode: '',
-                            phoneNumber: '',
-                            email: '',
-                            agency: '',
-                            numOfChildren: 0,
-                            childNames: [''],
-                            childGenders: [''],
-                            childAges: [''],
-                            childGrades: ['']
-                        }) 
-                    })
-                    .catch(error => {
-                        alert('There was a problem registering. Please try again later or email Families For Families.\n' + error.message)
-                    })
+                
             }  else {
                 alert('Please make sure all the contact information fields are filled out.')
             }  
