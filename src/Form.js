@@ -117,7 +117,8 @@ class Form extends Component {
 
     async fetchRegisteredEmails() {
         try {
-            const response = await fetch('https://sheet.best/api/sheets/69691e5c-affa-4614-95ac-7866672bbfea');
+            // ---------------------------------- ADD API URL BELOW ----------------------------------------------------
+            const response = await fetch('https://sheet.best/api/sheets/69691e5c-affa-4614-95ac-7866672bbfea'); 
             const data = await response.json();
 
             const registeredEmails = data.map((row) => row["Email"]);
@@ -166,6 +167,7 @@ class Form extends Component {
                         "Date Signed Up": new Date().toLocaleString().split(',')[0],
                         "Sponsored": 'No'        
                     }
+                    // ---------------------------------- ADD API URL BELOW ----------------------------------------------------
                     axios.post("https://sheet.best/api/sheets/69691e5c-affa-4614-95ac-7866672bbfea", data) 
                         .then((response) => {
                             if (response.status === 200) {
